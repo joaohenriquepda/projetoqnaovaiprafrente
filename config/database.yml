@@ -55,7 +55,7 @@ production:
   database: datumd0hcglp7e
   username: hyuzdwdagboixv
   password: eab703354dd254b67f1ab8108e618f0d15d8c2d71f1e2180f370d60496518ea0
-  host: 
+  host: ec2-23-21-156-171.compute-1.amazonaws.com
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
