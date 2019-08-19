@@ -1,0 +1,48 @@
+<%= form_with(model: person, local: true) do |form| %>
+  <% if person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+        <% person.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label "Nome" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Password" %>
+    <%= form.password_field :password %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label "Transaction" %>
+    <%= form.password_field :transaction_password %>
+  </div>
+     
+  <div class="field">
+      <div>
+      <%= form.label "Preciso de um serviço" %>
+      <%= form.radio_button :category, "true" %>
+      <%= form.label "Estou oferecendo um serviço" %>
+      <%= form.radio_button :category, "false" %>
+  </div>
+  </div>
+
+
+  <div class="field">
+    <%= form.label "Telefone" %>
+    <%= form.text_field :phone  %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

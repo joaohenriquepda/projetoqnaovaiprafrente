@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+  db:
+    image: postgres:9.3
+    restart: always
+    ports:
+      - "5000:5432"
+    environment:
+      - PGDATA=/postgresql
+      - POSTGRES_USER=app_username
+      - POSTGRES_PASSWORD=app_password
+      - PG_PASSWORD=app_password
+    volumes:
+      - ./tmp/data/postgresql:/postgresql
+  redis:
+    image: redis:latest
+  api:
+    build: ./
+    command: rails s -b 0.0.0.0
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+      - 8888:8888
+    depends_on:
+      - db
+      - redis
