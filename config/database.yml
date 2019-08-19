@@ -36,11 +36,26 @@ test:
   # password: engefisaproject_password
   host: db
 
+
+On Heroku and other platform providers, you may have a full connection URL
+# available as an environment variable. For example:
+#
+#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+#
+# You can use this database configuration with:
+#
+  production:
+    url: postgres://hyuzdwdagboixv:eab703354dd254b67f1ab8108e618f0d15d8c2d71f1e2180f370d60496518ea0@ec2-23-21-156-171.compute-1.amazonaws.com:5432/datumd0hcglp7e
+
+
+
+
 production:
   <<: *default
-  database: app_production
-  username: app_username
-  password: app_password
+  database: datumd0hcglp7e
+  username: hyuzdwdagboixv
+  password: eab703354dd254b67f1ab8108e618f0d15d8c2d71f1e2180f370d60496518ea0
+  host: 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
