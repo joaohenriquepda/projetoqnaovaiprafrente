@@ -36,7 +36,7 @@ test:
   host: db
 
 
-On Heroku and other platform providers, you may have a full connection URL
+#On Heroku and other platform providers, you may have a full connection URL
 # available as an environment variable. For example:
 #
 #   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
