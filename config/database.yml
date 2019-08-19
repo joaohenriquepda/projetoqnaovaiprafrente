@@ -33,7 +33,6 @@ test:
   database: app_test
   username: app_username
   password: app_password
-  # password: engefisaproject_password
   host: db
 
 
@@ -44,10 +43,8 @@ On Heroku and other platform providers, you may have a full connection URL
 #
 # You can use this database configuration with:
 #
-  production:
-    url: postgres://hyuzdwdagboixv:eab703354dd254b67f1ab8108e618f0d15d8c2d71f1e2180f370d60496518ea0@ec2-23-21-156-171.compute-1.amazonaws.com:5432/datumd0hcglp7e
-
-
+  # production:
+  #   url: postgres://hyuzdwdagboixv:eab703354dd254b67f1ab8108e618f0d15d8c2d71f1e2180f370d60496518ea0@ec2-23-21-156-171.compute-1.amazonaws.com:5432/datumd0hcglp7e
 
 
 production:
