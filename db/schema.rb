@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2019_08_19_175119) do
     t.string "phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "password"
     t.string "password_digest"
     t.string "recovery_password_digest"
     t.string "transaction_password_digest"

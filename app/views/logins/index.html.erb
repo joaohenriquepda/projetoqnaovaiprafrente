@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Logins</h1>
+
+<%= form_with do |form| %>
+    
+  <div class="field">
+    <%= form.label "Email" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Password" %>
+    <%= form.password_field :password %>
+  </div>
+
+  
+<% end %>
+  <%= button_to "New", { action: "login" } %>
+<br>
+
+<%=  %>
+
+<%= link_to 'Se cadastrar', new_person_path %>
